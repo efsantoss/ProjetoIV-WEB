@@ -1,0 +1,111 @@
+.footer {
+    background: linear-gradient(rgb(53, 53, 53), black);
+    height: fit-content;
+}
+
+.footer_container {
+    margin: auto;
+    padding: 2%;
+}
+
+.row_1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.row_2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.col_1 {
+    display: flex;
+    flex-direction: column;
+    margin-top:3%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul.other_pages, ul.destinys {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.3rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: normal;
+}
+
+ul.destinys {
+    position: relative;
+    margin-top: 1%;
+}
+
+.about_p {
+    color: white;
+    font-size: 1.3rem;
+    width: 30%;
+    letter-spacing: 4px;
+    font-family: 'Jost', sans-serif;
+    font-weight: normal;
+}
+
+.copyright, .copyright_name {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+.footer_logo, .destinty_list {
+    color: white;
+    letter-spacing: 4px;
+    font-size: 1.9rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+}
+
+.h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(250, 53, 53);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+@media (max-width: 1110px) {
+    .row_1 {
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .row_2 {
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .col_1 {
+        margin-top: 8%;
+    }
+    .row1_element {
+        margin: 20px;
+    }
+    .about_p, ul.other_pages {
+        font-size: 1.5rem;
+    }
+}
