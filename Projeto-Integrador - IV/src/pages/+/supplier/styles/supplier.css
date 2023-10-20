@@ -12,7 +12,7 @@ main {
     min-width: 320px;
     max-width: 1500px;
     margin: auto;
-    background-image: url("/src/common/public/image\ 1.svg");
+    background-image:("");
     max-width: 100%;
     height: fit-content;
     max-height: 100%;
