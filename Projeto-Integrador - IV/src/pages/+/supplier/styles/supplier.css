@@ -4,7 +4,6 @@
 }
 
 main {
-    background-size: cover;
     height: 100%;
 }
 
@@ -12,14 +11,26 @@ main {
     min-width: 320px;
     max-width: 1500px;
     margin: auto;
-    background-image:("");
     max-width: 100%;
     height: fit-content;
     max-height: 100%;
+    list-style: none;
+    background-image: url("/Projeto-Integrador - IV/src/common/public/map.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+h1, p {
+    position: relative;
+    color: white;
+    font-family: 'Jost', sans-serif;
+}
+
+button:hover {
+    transition-duration: 0.5s;
+    opacity: 0.7;
 }
 
 .container {
@@ -28,41 +39,39 @@ main {
     justify-content: center;
 }
 
-.rules {
-    display: flex;
-    flex-direction: column;
+.rectangle {
+    
     align-items: center;
+    text-align: center;
     margin-top: 7%;
-    margin-bottom: 20%;
-    background: linear-gradient(rgb(53, 53, 53), black);
-    width: 130vh;
-    height: fit-content;
+    margin-bottom: 10%;
+    width: 160vh;
+    height: 70vh;
     border-radius: 50px;
+    background-image: linear-gradient(to left, black,#343333);
+    border: 5px solid gray;
 }
 
-h1, p {
+a {
+    color: white;
+}
+
+.btn_supply{
+    float: left;
+    margin-top: 15%;
+    margin-left: 50px;
+    font-size: 100px;
+    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
     color: white;
     font-family: 'Jost', sans-serif;
 }
 
-h1 {
-    padding: 50px;
-    font-size: 2.3rem;
-    font-weight: bold;
+.btn_historic{
+    float: right;
+    margin-top: 15%;
+    margin-right: 60px;
+    font-size: 100px;
+    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
+    color: white;
+    font-family: 'Jost', sans-serif;
 }
-
-p {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 5px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.p_5 {
-    font-size: 1.5rem;
-    margin-top: 7%;
-    letter-spacing: 1px;
-    padding-left: 100px;
-}
-
