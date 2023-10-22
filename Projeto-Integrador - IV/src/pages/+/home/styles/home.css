@@ -15,7 +15,7 @@ main {
     height: fit-content;
     max-height: 100%;
     list-style: none;
-    background-image: url("/Projeto-Integrador - IV/src/common/public/mapBackground.svg");
+    background-image: url("/Projeto-Integrador - IV/src/common/public/map.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -40,13 +40,13 @@ button:hover {
 }
 
 .rectangle {
+    
     align-items: center;
-    display: flex;
-    padding: 5%;
+    text-align: center;
     margin-top: 7%;
-    margin-bottom: 20%;
-    width: 130vh;
-    height: 50vh;
+    margin-bottom: 10%;
+    width: 160vh;
+    height: 70vh;
     border-radius: 50px;
     background-image: linear-gradient(to left, black,#343333);
     border: 5px solid gray;
@@ -57,24 +57,21 @@ a {
 }
 
 .btn_supplier{
-    font-size: 50px;
-    margin-right: 500px;
+    float: left;
+    margin-top: 15%;
+    margin-left: 50px;
+    font-size: 100px;
     background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
-    padding: 15px;
     color: white;
     font-family: 'Jost', sans-serif;
 }
 
 .btn_industry{
-    font-size: 50px;
-    margin-left: 100px;
+    float: right;
+    margin-top: 15%;
+    margin-right: 60px;
+    font-size: 100px;
     background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
-    padding: 20px;
     color: white;
     font-family: 'Jost', sans-serif;
 }
-
-.image{
-    
-}
-
