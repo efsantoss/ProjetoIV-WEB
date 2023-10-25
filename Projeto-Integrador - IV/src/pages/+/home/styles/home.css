@@ -40,7 +40,6 @@ button:hover {
 }
 
 .rectangle {
-    
     align-items: center;
     text-align: center;
     margin-top: 7%;
@@ -61,9 +60,11 @@ a {
     margin-top: 15%;
     margin-left: 50px;
     font-size: 100px;
-    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
+    background: linear-gradient(to left, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;
+    border: 5px solid gray;
+    box-shadow: rgba(128, 128, 128, 0.4) -5px 5px, rgba(128, 128, 128, 0.3) -10px 10px, rgba(128, 128, 128, 0.2) -15px 15px, rgba(128, 128, 128, 0.1) -20px 20px, rgba(128, 128, 128, 0.05) -25px 25px;
 }
 
 .btn_industry{
@@ -71,7 +72,10 @@ a {
     margin-top: 15%;
     margin-right: 60px;
     font-size: 100px;
-    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
+    background: linear-gradient(to right, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;
+    border: 5px solid gray;
+    box-shadow: rgba(128, 128, 128, 0.4) 5px 5px, rgba(128, 128, 128, 0.3) 10px 10px, rgba(128, 128, 128, 0.2) 15px 15px, rgba(128, 128, 128, 0.1) 20px 20px, rgba(128, 128, 128, 0.05) 25px 25px;
 }
+
