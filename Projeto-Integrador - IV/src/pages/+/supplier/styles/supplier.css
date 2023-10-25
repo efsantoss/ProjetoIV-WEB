@@ -60,18 +60,24 @@ a {
     float: left;
     margin-top: 15%;
     margin-left: 50px;
-    font-size: 100px;
-    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
+    font-size: 80px;
+    background: linear-gradient(to right, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;
+    border: 5px solid gray;
+    font-family: 'Jost', sans-serif;
+    box-shadow: rgba(128, 128, 128, 0.4) -5px 5px, rgba(128, 128, 128, 0.3) -10px 10px, rgba(128, 128, 128, 0.2) -15px 15px, rgba(128, 128, 128, 0.1) -20px 20px, rgba(128, 128, 128, 0.05) -25px 25px;
 }
 
 .btn_historic{
     float: right;
     margin-top: 15%;
     margin-right: 60px;
-    font-size: 100px;
-    background: linear-gradient(rgb(22, 37, 126), rgb(70, 85, 218));
+    font-size: 80px;
+    background: linear-gradient(to right, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;
+    border: 5px solid gray;
+    font-family: 'Jost', sans-serif;
+    box-shadow: rgba(128, 128, 128, 0.4) 5px 5px, rgba(128, 128, 128, 0.3) 10px 10px, rgba(128, 128, 128, 0.2) 15px 15px, rgba(128, 128, 128, 0.1) 20px 20px, rgba(128, 128, 128, 0.05) 25px 25px;
 }
