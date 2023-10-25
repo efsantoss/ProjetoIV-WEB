@@ -40,7 +40,6 @@ button:hover {
 }
 
 .in_progress, .concluded {
-    
     align-items: center;
     text-align: center;
     margin-top: 7%;
