@@ -59,7 +59,7 @@ a {
     float: left;
     margin-top: 15%;
     margin-left: 50px;
-    font-size: 100px;
+    font-size: 80px;
     background: linear-gradient(to left, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;
@@ -71,7 +71,7 @@ a {
     float: right;
     margin-top: 15%;
     margin-right: 60px;
-    font-size: 100px;
+    font-size: 80px;
     background: linear-gradient(to right, black,#343333);
     color: white;
     font-family: 'Jost', sans-serif;

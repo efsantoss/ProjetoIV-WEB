@@ -39,8 +39,8 @@ h1, p {
     align-items: center;
     margin-top: 7%;
     margin-bottom: 10%;
-    width: 85vh;
-    height: 70vh;
+    width: 90vh;
+    height: 75vh;
     border-radius: 50px;
     background-image: linear-gradient(to left, black,#343333);
     border: 5px solid gray;
@@ -156,8 +156,8 @@ h1, p {
     margin-top: 7%;
     margin-bottom: 10%;
     margin-left: 20px;
-    width: 85vh;
-    height: 70vh;
+    width: 90vh;
+    height: 90vh;
     border-radius: 50px;
     background-image: linear-gradient(to left, black,#343333);
     border: 5px solid gray;
