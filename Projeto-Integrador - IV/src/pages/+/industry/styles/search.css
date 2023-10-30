@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.search{
+    margin-right: 50vh;
+    width: 50vh;
+    height: 30px;
+    background-color: white;
+    border: 5px double black;
+    border-radius: 20px;
+    padding-left: 8px;
+    color: black;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+.btn_historic{
+    margin-right: 3vh;
+    list-style: none;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 2vh;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+main {
+    height: 100%;
+}
+
+.main_container {
+    min-width: 320px;
+    max-width: 1500px;
+    margin: auto;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 100%;
+    list-style: none;
+    background-image: url("/Projeto-Integrador - IV/src/common/public/map.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    margin-top: 110vh;
+}
