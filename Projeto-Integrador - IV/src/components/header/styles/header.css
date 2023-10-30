@@ -12,18 +12,18 @@ a:hover {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-right: 140vh;
 }
 
 .logo {
   font-family: 'Jost', sans-serif;
   font-weight: bold;
   font-size: 2rem;
+  margin-left: 20px;
 }
   
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: 'Jost', sans-serif;
   font-weight: 500;
@@ -40,12 +40,12 @@ nav {
 .nav-list li {
   font-size: 1.2rem;
   letter-spacing: 3px;
-  margin-left: 20px;
 }
   
 .mobile-menu {
   display: none;
   cursor: pointer;
+  margin-right: 10vh;
 }
   
 .mobile-menu div {
