@@ -45,7 +45,7 @@ button:hover {
     margin-top: 7%;
     margin-bottom: 10%;
     width: 160vh;
-    height: 70vh;
+    height: 73vh;
     border-radius: 50px;
     background-image: linear-gradient(to left, black,#343333);
     border: 5px solid gray;
@@ -65,6 +65,7 @@ a {
     font-family: 'Jost', sans-serif;
     border: 5px solid gray;
     box-shadow: rgba(128, 128, 128, 0.4) -5px 5px, rgba(128, 128, 128, 0.3) -10px 10px, rgba(128, 128, 128, 0.2) -15px 15px, rgba(128, 128, 128, 0.1) -20px 20px, rgba(128, 128, 128, 0.05) -25px 25px;
+    letter-spacing: 2px;
 }
 
 .btn_industry{
@@ -77,5 +78,6 @@ a {
     font-family: 'Jost', sans-serif;
     border: 5px solid gray;
     box-shadow: rgba(128, 128, 128, 0.4) 5px 5px, rgba(128, 128, 128, 0.3) 10px 10px, rgba(128, 128, 128, 0.2) 15px 15px, rgba(128, 128, 128, 0.1) 20px 20px, rgba(128, 128, 128, 0.05) 25px 25px;
+    letter-spacing: 2px;
 }
 
