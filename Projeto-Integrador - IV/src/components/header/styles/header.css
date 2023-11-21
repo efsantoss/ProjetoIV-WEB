@@ -12,6 +12,9 @@ a:hover {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
 }
 
 .logo {

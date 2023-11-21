@@ -14,25 +14,47 @@
     <body>
         <header>
 			<nav>
-				<a class="logo" href="/">ENERGY MATCH</a>
+				<button class="logo" onclick="redirecionarHome()">ENERGY MATCH</button>
+
+						<script>
+    						function redirecionarHome() {
+        					
+        					window.location.href = '../../+/home/home.html';
+   						 }
+						</script>
                 <input type="text" class="search">
-                <li class="btn_historic"><a href="/historic">Histórico</a></li>
+                <button class="btn_historic" onclick="redirecionar()">Histórico</button>
+
+						<script>
+    						function redirecionar() {
+        					
+        					window.location.href = '../../+/industry/historicIndustry.html';
+   						 }
+						</script>
                 <div class="mobile-menu">
 					<div class="line1"></div>
 					<div class="line2"></div>
 					<div class="line3"></div>
 				</div>
 				<ul class="nav-list">
+					<h1 class="h1">Fornecedores</h1>
                     <div class="component-1">
-						<div class="text">
-                            <p id="textoExibicao"></p>
-                            <script>
-                                var queryString = window.location.search;
-                                var urlParams = new URLSearchParams(queryString);
-                                var texto = urlParams.get("texto");
-                                document.getElementById("textoExibicao").textContent = texto;
-                            </script>
-						</div>
+						<p id="textoExibicao1"></p>
+						<p id="textoExibicao2"></p>
+					
+						<script>
+							// Obter os textos da sessionStorage
+							var texto1 = sessionStorage.getItem("textoEnviado1");
+							var texto2 = sessionStorage.getItem("textoEnviado2");
+					
+							if (texto1 && texto2) {
+								document.getElementById("textoExibicao1").textContent = texto1;
+								document.getElementById("textoExibicao2").textContent = texto2;
+							} else {
+								// Se não houver texto, redirecionar de volta para a página de entrada
+								window.location.href = "../../+/supplier/supply.html";
+							}
+						</script>
                     </div>
                     <div class="component-2">
                         <p>xxxxxxxx</p>
@@ -63,14 +85,27 @@
                                 Em um mundo que valoriza a sustentabilidade e a eficiência, estamos comprometidos em unir as peças necessárias para impulsionar a energia limpa. 
 							</p>
 							<ul class="other_pages row1_element">
-								<li class="page_footer_link"><a href="#"><u>Fornecedores</u></a></li>
-								<li class="page_footer_link"><a href="#"><u>Indústria</u></a></li>
-								<li class="page_footer_link"><a href="#"><u>Sobre nós</u></a></li>
+								<button class="page_footer_link" onclick="redirecionarFornecedor()">Fornecedor</button>
+
+								<script>
+									function redirecionarFornecedor() {
+									
+									window.location.href = '../../+/supplier/logInSupplier.html';
+									}
+								</script>
+
+								<button class="page_footer_link" onclick="redirecionarIndústria()">Indústria</button>
+
+								<script>
+									function redirecionarIndústria() {
+									
+									window.location.href = '../../+/industry/search.html';
+									}
+								</script>
 							</ul>
 						</div>
 						<div class="col_1">
 							<h5 class="copyright">Copyright 2023 © Todos os Direitos Reservados. Desenvolvido por: </h5>
-							<p class="copyright_name">Anna Julia Pereira dos Santos Casadio Telles</p>
 							<p class="copyright_name">Enzo Fischer Santos</p>
 							<p class="copyright_name">Felipe Fadelli Padovan</p>
 							<p class="copyright_name">Matheus Santos Caldas</p>

@@ -74,6 +74,17 @@ ul.destinys {
     font-weight: bold;
 }
 
+.page_footer_link{
+    color: white;
+    letter-spacing: 4px;
+    font-size: 1.9rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
 .h1::before {
     content: '';
     position: absolute;

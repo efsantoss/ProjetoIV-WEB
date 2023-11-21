@@ -3,12 +3,15 @@
     padding: 0;
 }
 
+main {
+    height: 100%;
+}
+
 .search{
     margin-right: 50vh;
     width: 50vh;
     height: 30px;
     background-color: white;
-    border: 5px double black;
     border-radius: 20px;
     padding-left: 8px;
     color: black;
@@ -23,10 +26,23 @@
     font-size: 2vh;
     letter-spacing: 2px;
     text-transform: uppercase;
+    background-color: transparent;
+    border: none;
 }
 
-main {
-    height: 100%;
+.h1{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 2vh;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.component-1{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 2vh;
 }
 
 .main_container {

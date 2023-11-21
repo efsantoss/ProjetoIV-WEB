@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Histórico</title>
+		<title>Fornecer</title>
 		<link rel="website icon" type="svg" href="/Projeto-Integrador - IV/src/common/public/logoOficial.svg">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/header/styles/header.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/footer/styles/footer.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/common/styles/fonts.css">
-        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/historicSupplier.css">
+        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/supply.css">
 	</head>
-    <body>
-        <header>
+	<body>
+		<header>
 			<nav>
 				<button class="logo" onclick="redirecionarHome()">ENERGY MATCH</button>
 
@@ -24,13 +24,41 @@
 						</script>
 			</nav>
 		</header>
-        <div class="main_container">
+
+		<div class="main_container">
             <main>
                 <div class="container">
                     <div class="rectangle">
-                        <div class="section_historic">
-                            <h1 class="historic">Histórico</h1>
-                        </div>                  
+						<div class="section_address">
+                            <div>
+                                <h1>Endereço</h1>
+                                <input class="address" type="text" id="textoInput1">
+                            </div>
+						</div>
+                        <div>
+                            <h1 class="section_kilogram">Quantidade (Em kg)</h1>
+                            <input class="kilogram" type="text" id="textoInput2">
+                            <button class="button-86" onclick="enviarFormulario()">Enviar</button>
+                        
+                            <script>
+                                function enviarFormulario() {
+                                    var texto1 = document.getElementById("textoInput1").value;
+                                    var texto2 = document.getElementById("textoInput2").value;
+                            
+                                    if (texto1.trim() !== "" && texto2.trim() !== "") {
+                                        // Armazenar os textos na sessionStorage (ou localStorage)
+                                        sessionStorage.setItem("textoEnviado1", texto1);
+                                        sessionStorage.setItem("textoEnviado2", texto2);
+                                        
+                                        // Redirecionar para as páginas desejadas
+                                        window.location.href = "../../+/industry/search.html";
+                                        window.location.href = "../../+/supplier/logInSupplier.html";
+                                    } else {
+                                        alert("Por favor, insira texto em ambos os campos antes de enviar.");
+                                    }
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
                 <footer class="footer">
@@ -48,7 +76,7 @@
 								<script>
 									function redirecionarFornecedor() {
 									
-									window.location.href = '../../+/supplier/supplier.html';
+									window.location.href = '../../+/supplier/logInSupplier.html';
 									}
 								</script>
 
@@ -74,5 +102,6 @@
 				</footer>
             </main>
         </div>
-    </body>
+		<!--<script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>-->
+	</body>
 </html>

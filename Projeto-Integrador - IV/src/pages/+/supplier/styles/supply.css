@@ -34,7 +34,7 @@ h1, p {
     justify-content: center;
 }
 
-.rectangle_1 {
+.rectangle {
     display: grid;
     align-items: center;
     margin-top: 7%;
@@ -46,7 +46,17 @@ h1, p {
     border: 5px solid gray;
 }
 
-.section_email{
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons1{
+    margin-right: 15%;
+}
+
+
+.section_address{
     margin-left: 50px;
     font-size: 12px;
     color: white;
@@ -54,7 +64,7 @@ h1, p {
     
 }
 
-.email{
+.address{
     height: 35px;
     width: 73vh;
     background-color: transparent;
@@ -64,14 +74,15 @@ h1, p {
     color: #f0f0f0;
 }
 
-.section_password{
+.section_kilogram{
     margin-left: 50px;
-    font-size: 12px;
+    font-size: 21px;
     color: white;
     font-family: 'Jost', sans-serif;
 }
 
-.password{
+.kilogram{
+    margin-left: 50px;
     height: 35px;
     width: 73vh;
     background-color: transparent;
@@ -79,6 +90,7 @@ h1, p {
     box-shadow: rgba(128, 128, 128, 0.4) 0px 5px, rgba(128, 128, 128, 0.3) 0px 10px, rgba(128, 128, 128, 0.2) 0px 15px, rgba(128, 128, 128, 0.1) 0px 20px, rgba(128, 128, 128, 0.05) 0px 25px;
     padding-left: 8px;
     color: #f0f0f0;
+    margin-bottom: 10%;
 }
 
 .button-86 {
@@ -100,7 +112,7 @@ h1, p {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-left: 29vh;
+  margin-left: 35%;
 }
 
 .button-86::after,
@@ -147,54 +159,4 @@ h1, p {
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
-}
-
-
-.rectangle_2 {
-    display: grid;
-    align-items: center;
-    margin-top: 7%;
-    margin-bottom: 10%;
-    margin-left: 20px;
-    width: 90vh;
-    height: 90vh;
-    border-radius: 50px;
-    background-image: linear-gradient(to left, black,#343333);
-    border: 5px solid gray;
-}
-
-.section_cnpj{
-    margin-left: 50px;
-    font-size: 11px;
-    color: white;
-    font-family: 'Jost', sans-serif;
-    
-}
-
-.cnpj{
-    height: 35px;
-    width: 73vh;
-    background-color: transparent;
-    border: 3px solid gray;
-    box-shadow: rgba(128, 128, 128, 0.4) 0px 5px, rgba(128, 128, 128, 0.3) 0px 10px, rgba(128, 128, 128, 0.2) 0px 15px, rgba(128, 128, 128, 0.1) 0px 20px, rgba(128, 128, 128, 0.05) 0px 25px;
-    padding-left: 8px;
-    color: #f0f0f0;
-}
-
-.section_phone{
-    margin-left: 50px;
-    font-size: 11px;
-    color: white;
-    font-family: 'Jost', sans-serif;
-    
-}
-
-.phone{
-    height: 35px;
-    width: 73vh;
-    background-color: transparent;
-    border: 3px solid gray;
-    box-shadow: rgba(128, 128, 128, 0.4) 0px 5px, rgba(128, 128, 128, 0.3) 0px 10px, rgba(128, 128, 128, 0.2) 0px 15px, rgba(128, 128, 128, 0.1) 0px 20px, rgba(128, 128, 128, 0.05) 0px 25px;
-    padding-left: 8px;
-    color: #f0f0f0;
 }

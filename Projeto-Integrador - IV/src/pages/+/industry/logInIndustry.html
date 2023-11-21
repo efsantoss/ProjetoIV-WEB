@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Histórico</title>
+		<title>Log in</title>
 		<link rel="website icon" type="svg" href="/Projeto-Integrador - IV/src/common/public/logoOficial.svg">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/header/styles/header.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/footer/styles/footer.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/common/styles/fonts.css">
-        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/historicSupplier.css">
+        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/industry/styles/logInIndustry.css">
 	</head>
-    <body>
-        <header>
+	<body>
+		<header>
 			<nav>
 				<button class="logo" onclick="redirecionarHome()">ENERGY MATCH</button>
 
@@ -24,13 +24,43 @@
 						</script>
 			</nav>
 		</header>
-        <div class="main_container">
+
+		<div class="main_container">
             <main>
                 <div class="container">
                     <div class="rectangle">
-                        <div class="section_historic">
-                            <h1 class="historic">Histórico</h1>
-                        </div>                  
+						<div class="section_email">
+							<h1>E-mail</h1>
+							<input type="text" class="email">
+						</div>
+						<div class="section_password">
+							<h1>Senha</h1>
+							<input type="text" class="password">
+						</div>  
+						<div class="buttons">
+							<div class="buttons1">
+								<button class="button-86" onclick="redirecionar1()">login</button>
+
+								<script>
+									function redirecionar1() {
+									
+									window.location.href = '../../+/industry/search.html';
+									}
+								</script>   
+							</div>  
+
+							<div class="buttons2">
+								<button class="button-86" onclick="redirecionar2()">Não tem uma conta?</button>
+
+								<script>
+									function redirecionar2() {
+									
+									window.location.href = '../../+/industry/createAccountIndustry.html';
+									}
+								</script> 
+							</div>    
+						</div>
+						   
                     </div>
                 </div>
                 <footer class="footer">
@@ -48,7 +78,7 @@
 								<script>
 									function redirecionarFornecedor() {
 									
-									window.location.href = '../../+/supplier/supplier.html';
+									window.location.href = '../../+/supplier/logInSupplier.html';
 									}
 								</script>
 
@@ -74,5 +104,6 @@
 				</footer>
             </main>
         </div>
-    </body>
+		<!--<script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>-->
+	</body>
 </html>
