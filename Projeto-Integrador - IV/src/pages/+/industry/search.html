@@ -38,34 +38,53 @@
 				</div>
 				<ul class="nav-list">
 					<h1 class="h1">Fornecedores</h1>
-                    <div class="component-1">
-						<p id="textoExibicao1"></p>
-						<p id="textoExibicao2"></p>
+
+					<div class="componente" id="componente1">
+						<h1>Texto no Componente 1:</h1>
+						<p id="textoExibicao1a"></p>
+						<p id="textoExibicao1b"></p>
+					</div>
+				
+					<div class="componente" id="componente2">
+						<h1>Texto no Componente 2:</h1>
+						<p id="textoExibicao2a"></p>
+						<p id="textoExibicao2b"></p>
+					</div>
+				
+					<div class="componente" id="componente3">
+						<h1>Texto no Componente 3:</h1>
+						<p id="textoExibicao3a"></p>
+						<p id="textoExibicao3b"></p>
+					</div>
 					
-						<script>
-							// Obter os textos da sessionStorage
-							var texto1 = sessionStorage.getItem("textoEnviado1");
-							var texto2 = sessionStorage.getItem("textoEnviado2");
+					<!-- Script para obter parâmetros de consulta da URL -->
+					<script>
+						function obterParametro(nome) {
+							const urlParams = new URLSearchParams(window.location.search);
+							return urlParams.get(nome);
+						}
 					
-							if (texto1 && texto2) {
-								document.getElementById("textoExibicao1").textContent = texto1;
-								document.getElementById("textoExibicao2").textContent = texto2;
+						var contador = obterParametro("contador");
+					
+						contador = parseInt(contador); // Converter para número
+					
+						for (var i = 1; i <= 3; i++) {
+							var texto1 = sessionStorage.getItem("textoEnviado" + contador + "a");
+							var texto2 = sessionStorage.getItem("textoEnviado" + contador + "b");
+					
+							var componente = document.getElementById("componente" + i);
+							var textoExibicao1 = document.getElementById("textoExibicao" + i + "a");
+							var textoExibicao2 = document.getElementById("textoExibicao" + i + "b");
+					
+							if (i === contador && texto1 && texto2) {
+								textoExibicao1.textContent = texto1;
+								textoExibicao2.textContent = texto2;
+								componente.style.display = "block";
 							} else {
-								// Se não houver texto, redirecionar de volta para a página de entrada
-								window.location.href = "../../+/supplier/supply.html";
+								componente.style.display = "none";
 							}
-						</script>
-                    </div>
-                    <div class="component-2">
-                        <p>xxxxxxxx</p>
-                        <p>xxxxxxxx</p>
-                        <p>xxxxxxxx</p>
-                    </div>
-                    <div class="component-3">
-                        <p>xxxxxxxx</p>
-                        <p>xxxxxxxx</p>
-                        <p>xxxxxxxx</p>
-                    </div>
+						}
+					</script>
 				</ul>
 			</nav>
 		</header>

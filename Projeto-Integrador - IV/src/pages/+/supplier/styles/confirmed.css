@@ -7,44 +7,6 @@ main {
     height: 100%;
 }
 
-.search{
-    margin-right: 50vh;
-    width: 50vh;
-    height: 30px;
-    background-color: white;
-    border-radius: 20px;
-    padding-left: 8px;
-    color: black;
-    font-size: medium;
-    letter-spacing: 1px;
-}
-.btn_historic{
-    margin-right: 3vh;
-    list-style: none;
-    color: white;
-    font-family: 'Jost', sans-serif;
-    font-size: 2vh;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: none;
-}
-
-.h1{
-    color: white;
-    font-family: 'Jost', sans-serif;
-    font-size: 2vh;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: underline;
-}
-
-.component-1{
-    color: white;
-    font-family: 'Jost', sans-serif;
-    font-size: 2vh;
-}
-
 .main_container {
     min-width: 320px;
     max-width: 1500px;
@@ -66,14 +28,40 @@ main {
     justify-content: center;
 }
 
-.footer{
-    margin-top: 110vh;
+.rectangle {
+    align-items: center;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 10%;
+    width: 120vh;
+    height: 70vh;
+    border-radius: 50px;
+    background-image: linear-gradient(to left, black,#343333);
+    border: 5px solid gray;
+}
+
+.concluded{
+    font-size: 45px;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    box-shadow: rgba(0, 128, 0, 0.4) 0px 5px, rgba(0, 128, 0, 0.3) 0px 10px, rgba(0, 128, 0, 0.2) 0px 15px, rgba(0, 128, 0, 0.1) 0px 20px, rgba(0, 128, 0, 0.05) 0px 25px;
+
+}
+
+p{
+    font-size: 37px;
+    color: white;
+    font-family: 'Jost', sans-serif; 
+}
+
+.textConclusion{
+    margin-top: 18vh;
 }
 
 .button-86 {
     all: unset;
-    width: 80px;
-    height: 15px;
+    width: 200px;
+    height: 30px;
     font-size: 16px;
     background: transparent;
     border: none;
@@ -89,7 +77,9 @@ main {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin-top: 5px;
+    margin-left: 39%;
+    margin-top: 20vh;
+    font-family: 'Jost', sans-serif;
   }
   
   .button-86::after,

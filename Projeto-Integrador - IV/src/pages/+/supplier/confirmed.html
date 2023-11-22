@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Log in</title>
+		<title>Concluído</title>
 		<link rel="website icon" type="svg" href="/Projeto-Integrador - IV/src/common/public/logoOficial.svg">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/header/styles/header.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/footer/styles/footer.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/common/styles/fonts.css">
-        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/logInSupplier.css">
+        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/confirmed.css">
 	</head>
-	<body>
-		<header>
+    <body>
+        <header>
 			<nav>
 				<button class="logo" onclick="redirecionarHome()">ENERGY MATCH</button>
 
@@ -24,66 +24,25 @@
 						</script>
 			</nav>
 		</header>
-
-		<div class="main_container">
+        <div class="main_container">
             <main>
                 <div class="container">
                     <div class="rectangle">
-						<div class="section_email" id="loginForm">
-							<h1>E-mail</h1>
-							<input type="text" class="email" id="username" name="username" required>
-						</div>
-						<div class="section_password">
-							<h1>Senha</h1>
-							<input type="password" class="password" id="password" name="password" required>
-						</div>  
-						<div class="buttons">
-							<div class="buttons1">
-								<button class="button-86" onclick="enviarDados()()">login</button>
+                        <div class="section">
+                            <h1 class="concluded">Concluído</h1>
+                        </div>
+                        <div class="textConclusion">
+                            <p>O seu lixo orgânico será retirado por uma industria especializada, muito obrigado!</p>
+                        </div> 
 
-								<script>
-										function enviarDados() {
-											const formulario = document.getElementById('loginForm');
-											const dados = new FormData(formulario);
+                        <button class="button-86" onclick="redirecionar1()">Voltar</button>
 
-											fetch('URL_do_seu_backend/login', {
-												method: 'POST',
-												body: dados
-											})
-											.then(response => response.json())
-											.then(data => {
-												i
-												console.log(data);
-												alert(data.message);
-											})
-											.then(data => {
-												
-												console.log(data);
-												if (data.success) {
-													window.location.href = '../../+/supplier/supplier.html'; 
-												} else {
-													alert(data.message);
-												}
-											})
-											.catch(error => {
-												console.error('Erro ao enviar dados:', error);
-											});
-										}		
-								</script>   
-							</div>  
-
-							<div class="buttons2">
-								<button class="button-86" onclick="redirecionar2()">Não tem uma conta?</button>
-
-								<script>
-									function redirecionar2() {
-									
-									window.location.href = '../../+/supplier/createAccountSupplier.html';
-									}
-								</script> 
-							</div>    
-						</div>
-						   
+                        <script>
+                            function redirecionar1() {
+                            
+                            window.location.href = '../../+/supplier/supplier.html';
+                            }
+                        </script>               
                     </div>
                 </div>
                 <footer class="footer">
@@ -101,7 +60,7 @@
 								<script>
 									function redirecionarFornecedor() {
 									
-									window.location.href = '../../+/supplier/logInSupplier.html';
+									window.location.href = '../../+/supplier/supplier.html';
 									}
 								</script>
 
@@ -127,6 +86,5 @@
 				</footer>
             </main>
         </div>
-		<!--<script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>-->
-	</body>
+    </body>
 </html>

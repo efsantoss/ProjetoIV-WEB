@@ -28,24 +28,47 @@
 		<div class="main_container">
             <main>
                 <div class="container">
-                    <div class="rectangle">
-						<div class="section_email">
+                    <form class="rectangle">
+						<div class="section_email" id="loginForm">
 							<h1>E-mail</h1>
-							<input type="text" class="email">
+							<input type="text" class="email" id="username" name="username" required>
 						</div>
 						<div class="section_password">
 							<h1>Senha</h1>
-							<input type="text" class="password">
+							<input type="password" class="password" id="password" name="password" required>
 						</div>  
 						<div class="buttons">
 							<div class="buttons1">
-								<button class="button-86" onclick="redirecionar1()">login</button>
+								<button class="button-86" onclick="enviarDados()()">login</button>
 
 								<script>
-									function redirecionar1() {
-									
-									window.location.href = '../../+/industry/search.html';
-									}
+										function enviarDados() {
+											const formulario = document.getElementById('loginForm');
+											const dados = new FormData(formulario);
+
+											fetch('URL_do_seu_backend/login', {
+												method: 'POST',
+												body: dados
+											})
+											.then(response => response.json())
+											.then(data => {
+												i
+												console.log(data);
+												alert(data.message);
+											})
+											.then(data => {
+												
+												console.log(data);
+												if (data.success) {
+													window.location.href = '../../+/industry/search.html'; 
+												} else {
+													alert(data.message);
+												}
+											})
+											.catch(error => {
+												console.error('Erro ao enviar dados:', error);
+											});
+										}		
 								</script>   
 							</div>  
 
@@ -61,7 +84,7 @@
 							</div>    
 						</div>
 						   
-                    </div>
+                    </form>
                 </div>
                 <footer class="footer">
 					<div class="footer_container">
