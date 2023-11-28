@@ -1,7 +1,7 @@
 <!-- Adicione isso ao seu HTML Matheus -->
 
 <!-- Seu HTML -->
-<html>
+<!--<html>
 <head>
   <!-- bibliotecas do Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
