@@ -1,0 +1,67 @@
+<!-- Adicione isso ao seu HTML Matheus -->
+
+<!-- Seu HTML -->
+<html>
+<head>
+  <!-- bibliotecas do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+
+  <!-- biblioteca Apollo Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@apollo/client@3.6.4/dist/index.umd.min.js"></script>
+</head>
+<body>
+  <!-- O conteúdo do seu corpo HTML aqui -->
+
+  <script>
+    // Configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyB3ESa89xuAdueNLnSCNMMiOUuc6fhuAYU",
+      authDomain: "energy-match.firebaseapp.com",
+      databaseURL: "https://energy-match-default-rtdb.firebaseio.com",
+      projectId: "energy-match",
+      storageBucket: "energy-match.appspot.com",
+      messagingSenderId: "1078857854189",
+      appId: "1:1078857854189:web:b9a395b1b0d3f991b970e4",
+    };
+
+    // Inicialize o Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Função para fazer chamadas GraphQL
+    async function fazerChamadaGraphQL() {
+      const graphqlEndpoint = 'URL-do-seu-servidor-GraphQL(local-host)';
+
+      // Obtenha o token de autenticação do usuário atual
+      const token = await firebase.auth().currentUser.getIdToken(/* forceRefresh */ true);
+
+      // Defina a sua consulta GraphQL
+      const query = `
+        query {
+          // Sua consulta GraphQL aqui
+        }
+      `;
+
+      // Construa o corpo da requisição
+      const requestBody = {
+        query: query,
+      };
+
+      // Faça a chamada GraphQL usando fetch
+      const resposta = await fetch(graphqlEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      // Obtenha os dados da resposta
+      const dados = await resposta.json();
+      console.log(dados);
+    }
+  </script>
+</body>
+</html>
