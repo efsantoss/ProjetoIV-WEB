@@ -29,40 +29,17 @@
             <main>
                 <div class="container">
                     <div class="rectangle">
-						<div class="section_address">
+						<div class="section">
                             <div>
-                                <h1>Endereço</h1>
-                                <input class="address" type="text" id="textoInput1" placeholder="Ex: Avenida Alameda das Travessas, nº 111, Edifício Bosque do Cerrado, apartamento 2222">
+                                <h1 class="section_address">Endereço</h1>
+                                <input class="address" type="text" placeholder="Ex: Avenida Alameda das Travessas, nº 111, Edifício Bosque do Cerrado, apartamento 2222">
                             </div>
                             <div>
                                 <h1 class="section_kilogram">Quantidade (Em kg)</h1>
-                                <input class="kilogram" type="text" id="textoInput2" placeholder="Ex: 10kg">
+                                <input class="kilogram" type="text" placeholder="Ex: 10kg">
                                 <button class="button-86" onclick="enviarFormulario()">Enviar</button>
                             </div>
-                        
-                            <script>
-                                var contador = 1;
-                            
-                                function enviarFormulario() {
-                                    var texto1 = document.getElementById("textoInput1").value;
-                                    var texto2 = document.getElementById("textoInput2").value;
-                            
-                                    if (texto1.trim() !== "" && texto2.trim() !== "") {
-                                        // Armazenar os textos no localStorage
-                                        sessionStorage.setItem("textoEnviado" + contador + "a", texto1);
-                                        sessionStorage.setItem("textoEnviado" + contador + "b", texto2);
-                            
-                                        // Construir a URL para a próxima página com parâmetros de consulta
-                                        var nextURL = "../../+/industry/search.html" +
-                                            "?contador=" + contador;
-                            
-                                        // Redirecionar para a próxima página
-                                        window.location.href = nextURL;
-                                    } else {
-                                        alert("Por favor, insira texto em ambos os campos antes de enviar.");
-                                    }
-                                }
-                            </script>
+
                         </div>
                     </div>
                 </div>
