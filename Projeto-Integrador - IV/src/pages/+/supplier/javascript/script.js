@@ -113,3 +113,150 @@ async function fazerChamadaGraphQLIndustry() {
     }
     
 }
+
+async function fazerChamadaLoginGraphQLSupplier() {
+    const email = document.querySelector('.email').value;
+    const password = document.querySelector('.password').value;
+
+    const LOGIN_SUPPLIER = `
+        query LoginSupplier($userInput: UserInput!) {
+            userLogIn(userInput: $userInput) {
+                message
+                status
+                id
+            }
+        }
+    `;
+
+    const userInput = {
+        userInput: {
+            email: email,
+            password: password
+        }
+    };
+
+    try {
+        const { data, errors } = await consumirAPI(
+            GRAPHQL_ENDPOINT,
+            LOGIN_SUPPLIER,
+            userInput
+        );
+
+        if (errors && errors.length > 0) {
+            console.error('Erro ao fazer login:', errors);
+            const errorMessage = errors.map(error => error.message).join('\n');
+            alert(`Erro ao fazer login:\n${errorMessage}`);
+        } else {
+            if (!data || !data.userLogIn) {
+                alert('Fornecedor não encontrado. Verifique seu e-mail e senha.');
+            } else {
+                console.log(data);
+                alert('Login bem-sucedido!');
+                const userId = data.userLogIn.id;
+                window.localStorage.setItem('userId', userId);
+                window.location.href = '../../+/supplier/supplier.html';
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao realizar chamada GraphQL:', error);
+        alert('Erro ao fazer login. Por favor, tente novamente.');
+    }
+}
+
+async function fazerChamadaLoginGraphQLIndustry() {
+    const email = document.querySelector('.email').value;
+    const password = document.querySelector('.password').value;
+
+    const LOGIN_INDUSTRY = `
+        query LoginIndustry($userInput: UserInput!) {
+            userLogIn(userInput: $userInput) {
+                message
+                status
+                id
+            }
+        }
+    `;
+
+    const userInput = {
+        userInput: {
+            email: email,
+            password: password
+        }
+    };
+
+    try {
+        const { data, errors } = await consumirAPI(
+            GRAPHQL_ENDPOINT,
+            LOGIN_INDUSTRY,
+            userInput
+        );
+
+        if (errors && errors.length > 0) {
+            console.error('Erro ao fazer login:', errors);
+            const errorMessage = errors.map(error => error.message).join('\n');
+            alert(`Erro ao fazer login:\n${errorMessage}`);
+        } else {
+            if (!data || !data.userLogIn) {
+                alert('Usuário não encontrado. Verifique seu e-mail e senha.');
+            } else {
+                console.log(data);
+                alert('Login bem-sucedido!');
+                window.location.href = '../../+/industry/search.html';
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao realizar chamada GraphQL:', error);
+        alert('Erro ao fazer login. Por favor, tente novamente.');
+    }
+}
+
+async function fazerChamadaGraphQLSupply() {
+    const userId = window.localStorage.getItem('userId');
+    const address = document.querySelector('.address').value;
+    const quantityInput = document.querySelector('.quantity').value;
+    const quantity = parseInt(quantityInput.replace(/\D/g, ''));
+
+    const CREATE_SUPPLY = `
+        mutation UpdateHistory($supplyData: SupplyDataInput!) {
+            updateSupplierHistory(supplyData: $supplyData) {
+                id
+                address
+                quantity
+            }
+        }
+    `;
+
+    const supplyData = {
+        supplyData: {
+            id: userId,
+            address: address,
+            quantity: quantity
+        }
+    }
+
+    try {
+        const { data, errors } = await consumirAPI(
+            GRAPHQL_ENDPOINT,
+            CREATE_SUPPLY,
+            supplyData
+        );
+
+        if (errors && errors.length > 0) {
+            console.error('Erro ao cadastrar os itens:', errors);
+            const errorMessage = errors.map(error => error.message).join('\n');
+            alert(`Erro ao cadastrar os itens:\n${errorMessage}`);
+        } else {
+            if (!data) {
+                alert('Itens não cadastrados.');
+            } else {
+                console.log(data);
+                alert('Itens cadastrados com sucesso!');
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao realizar chamada GraphQL:', error);
+        alert('Erro ao cadastrar os itens. Por favor, tente novamente.');
+    }
+}
+
+

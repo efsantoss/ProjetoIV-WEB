@@ -75,7 +75,7 @@ h1, p {
   color: #f0f0f0;
 }
 
-.section_kilogram{
+.section_quantity{
   margin-top: 8%;
   margin-left: 70px;
   font-size: 21px;
@@ -83,7 +83,7 @@ h1, p {
   font-family: 'Jost', sans-serif;
 }
 
-.kilogram{
+.quantity{
   margin-left: 60px;
   height: 35px;
   width: 73vh;

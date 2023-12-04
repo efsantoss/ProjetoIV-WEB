@@ -32,12 +32,12 @@
 						<div class="section">
                             <div>
                                 <h1 class="section_address">Endereço</h1>
-                                <input class="address" type="text" placeholder="Ex: Avenida Alameda das Travessas, nº 111, Edifício Bosque do Cerrado, apartamento 2222">
+                                <input class="address" id="address" placeholder="Ex: Avenida Alameda das Travessas, nº 111, Edifício Bosque do Cerrado, apartamento 2222">
                             </div>
                             <div>
-                                <h1 class="section_kilogram">Quantidade (Em kg)</h1>
-                                <input class="kilogram" type="text" placeholder="Ex: 10kg">
-                                <button class="button-86" onclick="enviarFormulario()">Enviar</button>
+                                <h1 class="section_quantity">Quantidade (Em kg)</h1>
+                                <input class="quantity" id="quantity" placeholder="Ex: 10kg">
+                                <button class="button-86" onclick="fazerChamadaGraphQLSupply()">Enviar</button>
                             </div>
 
                         </div>
@@ -82,6 +82,7 @@
 						</div>
 					</div>
 				</footer>
+				<script src="../../+/supplier/javascript/script.js"></script>
             </main>
         </div>
 		<!--<script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>-->

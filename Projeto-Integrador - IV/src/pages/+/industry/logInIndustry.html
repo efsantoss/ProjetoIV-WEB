@@ -31,45 +31,15 @@
                     <form class="rectangle">
 						<div class="section_email" id="loginForm">
 							<h1>E-mail</h1>
-							<input type="text" class="email" id="username" name="username" required>
+							<input type="text" class="email" id="email">
 						</div>
 						<div class="section_password">
 							<h1>Senha</h1>
-							<input type="password" class="password" id="password" name="password" required>
+							<input type="password" class="password" id="password" >
 						</div>  
 						<div class="buttons">
 							<div class="buttons1">
-								<button class="button-86" onclick="enviarDados()()">login</button>
-
-								<script>
-										function enviarDados() {
-											const formulario = document.getElementById('loginForm');
-											const dados = new FormData(formulario);
-
-											fetch('URL_do_seu_backend/login', {
-												method: 'POST',
-												body: dados
-											})
-											.then(response => response.json())
-											.then(data => {
-												i
-												console.log(data);
-												alert(data.message);
-											})
-											.then(data => {
-												
-												console.log(data);
-												if (data.success) {
-													window.location.href = '../../+/industry/search.html'; 
-												} else {
-													alert(data.message);
-												}
-											})
-											.catch(error => {
-												console.error('Erro ao enviar dados:', error);
-											});
-										}		
-								</script>   
+								<button class="button-86" onclick="fazerChamadaLoginGraphQLIndustry()">login</button>   
 							</div>  
 
 							<div class="buttons2">
@@ -125,6 +95,7 @@
 						</div>
 					</div>
 				</footer>
+				<script src="../../+/supplier/javascript/script.js"></script>
             </main>
         </div>
 		<!--<script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>-->
