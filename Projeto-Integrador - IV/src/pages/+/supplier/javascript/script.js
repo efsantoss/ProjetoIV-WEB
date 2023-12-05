@@ -259,4 +259,40 @@ async function fazerChamadaGraphQLSupply() {
     }
 }
 
+async function getSuppliesData() {
+    const GET_SUPPLIES = `
+        query GetSupplies {
+            getSupplies {
+                id
+                history {
+                    id
+                    address
+                    quantity
+                }
+            }
+        }
+    `;
 
+    try {
+        const { data, errors } = await consumirAPI(GRAPHQL_ENDPOINT, GET_SUPPLIES);
+
+        if (errors && errors.length > 0) {
+            console.error('Erro ao buscar fornecimentos:', errors);
+            const errorMessage = errors.map(error => error.message).join('\n');
+            alert(`Erro ao buscar fornecimentos:\n${errorMessage}`);
+        } else {
+            if (!data || !data.getSupplies) {
+                alert('Fornecimentos não encontrados.');
+            } else {
+                console.log(data.getSupplies);
+                // Aqui você pode usar os dados para atualizar o seu frontend
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao realizar chamada GraphQL:', error);
+        alert('Erro ao buscar fornecimentos. Por favor, tente novamente.');
+    }
+}
+
+// Chame a função para buscar os dados dos fornecimentos
+getSuppliesData();
