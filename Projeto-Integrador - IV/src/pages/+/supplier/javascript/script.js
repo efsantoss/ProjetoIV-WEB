@@ -212,7 +212,7 @@ async function fazerChamadaLoginGraphQLIndustry() {
 
 async function fazerChamadaGraphQLSupply() {
     const userId = window.localStorage.getItem('userId');
-    const address = document.querySelector('.address').value;
+    const address = document.querySelector('.address').value.replace("%20"," ");
     const quantityInput = document.querySelector('.quantity').value;
     const quantity = parseInt(quantityInput.replace(/\D/g, ''));
 
@@ -251,6 +251,7 @@ async function fazerChamadaGraphQLSupply() {
             } else {
                 console.log(data);
                 alert('Itens cadastrados com sucesso!');
+                window.location.href = '../../+/supplier/confirmed.html';
             }
         }
     } catch (error) {
@@ -264,7 +265,7 @@ async function getSuppliesData() {
         query GetSupplies {
             getSupplies {
                 id
-                history {
+                supplies {
                     id
                     address
                     quantity
@@ -284,15 +285,71 @@ async function getSuppliesData() {
             if (!data || !data.getSupplies) {
                 alert('Fornecimentos não encontrados.');
             } else {
-                console.log(data.getSupplies);
-                // Aqui você pode usar os dados para atualizar o seu frontend
+                // Chame a função de exibição passando os dados obtidos
+                displaySuppliesData(data.getSupplies);
             }
         }
     } catch (error) {
-        console.error('Erro ao realizar chamada GraphQL:', error);
-        alert('Erro ao buscar fornecimentos. Por favor, tente novamente.');
     }
 }
 
-// Chame a função para buscar os dados dos fornecimentos
-getSuppliesData();
+// Função para exibir os fornecimentos na tabela
+function displaySuppliesData(suppliesData) {
+    const suppliesContainer = document.getElementById('suppliesContainer');
+
+    // Limpe o conteúdo existente no contêiner
+    suppliesContainer.innerHTML = '';
+
+    suppliesData.forEach(data => {
+        const supplyItem = document.createElement('div');
+        supplyItem.classList.add('supply-item');
+        supplyItem.id = `supply-${data.id}`;
+
+        const idParagraph = document.createElement('p');
+        idParagraph.textContent = `ID: ${data.id}`;
+        supplyItem.appendChild(idParagraph);
+
+        // Verifique se 'supplies' está definido e não é uma matriz vazia
+        if (data.supplies && data.supplies.length > 0) {
+            data.supplies.forEach(supply => {
+                const addressParagraph = document.createElement('p');
+                addressParagraph.textContent = `Endereço: ${supply.address}`;
+                supplyItem.appendChild(addressParagraph);
+
+                const quantityParagraph = document.createElement('p');
+                quantityParagraph.textContent = `Quantidade(Kg): ${supply.quantity}`;
+                supplyItem.appendChild(quantityParagraph);
+            });
+        } else {
+            const noSuppliesParagraph = document.createElement('p');
+            noSuppliesParagraph.textContent = 'Sem fornecimentos disponíveis.';
+            supplyItem.appendChild(noSuppliesParagraph);
+        }
+
+        const confirmButton = document.createElement('button');
+        confirmButton.textContent = 'Clique para Confirmar';
+        confirmButton.classList.add('button-30');
+        confirmButton.addEventListener('click', () => handleSupplyClick(data.id));
+        supplyItem.appendChild(confirmButton);
+
+        suppliesContainer.appendChild(supplyItem);
+    });
+}
+
+// Chame a função getSuppliesData quando a página for carregada
+document.addEventListener('DOMContentLoaded', getSuppliesData);
+
+// Função para lidar com o clique no botão de confirmação
+function handleSupplyClick(supplyId) {
+    // Aqui você pode adicionar lógica para confirmar o fornecimento
+    alert(`Fornecimento confirmado com sucesso: ${supplyId}`);
+    const supplyItem = document.getElementById(`supply-${supplyId}`);
+    if (supplyItem) {
+        supplyItem.remove();
+    }
+}
+
+
+
+
+

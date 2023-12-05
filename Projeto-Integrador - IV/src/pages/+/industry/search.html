@@ -22,69 +22,14 @@
         					window.location.href = '../../+/home/home.html';
    						 }
 						</script>
-                <input type="text" class="search">
-                <button class="btn_historic" onclick="redirecionar()">Histórico</button>
 
-						<script>
-    						function redirecionar() {
-        					
-        					window.location.href = '../../+/industry/historicIndustry.html';
-   						 }
-						</script>
                 <div class="mobile-menu">
 					<div class="line1"></div>
 					<div class="line2"></div>
 					<div class="line3"></div>
 				</div>
 				<ul class="nav-list">
-					<h1 class="h1">Fornecedores</h1>
-
-					<div class="componente" id="componente1">
-						<h1>Texto no Componente 1:</h1>
-						<p id="textoExibicao1a"></p>
-						<p id="textoExibicao1b"></p>
-					</div>
-				
-					<div class="componente" id="componente2">
-						<h1>Texto no Componente 2:</h1>
-						<p id="textoExibicao2a"></p>
-						<p id="textoExibicao2b"></p>
-					</div>
-				
-					<div class="componente" id="componente3">
-						<h1>Texto no Componente 3:</h1>
-						<p id="textoExibicao3a"></p>
-						<p id="textoExibicao3b"></p>
-					</div>
-					
-					<!-- Script para obter parâmetros de consulta da URL -->
-					<script>
-						function obterParametro(nome) {
-							const urlParams = new URLSearchParams(window.location.search);
-							return urlParams.get(nome);
-						}
-					
-						var contador = obterParametro("contador");
-					
-						contador = parseInt(contador); // Converter para número
-					
-						for (var i = 1; i <= 3; i++) {
-							var texto1 = sessionStorage.getItem("textoEnviado" + contador + "a");
-							var texto2 = sessionStorage.getItem("textoEnviado" + contador + "b");
-					
-							var componente = document.getElementById("componente" + i);
-							var textoExibicao1 = document.getElementById("textoExibicao" + i + "a");
-							var textoExibicao2 = document.getElementById("textoExibicao" + i + "b");
-					
-							if (i === contador && texto1 && texto2) {
-								textoExibicao1.textContent = texto1;
-								textoExibicao2.textContent = texto2;
-								componente.style.display = "block";
-							} else {
-								componente.style.display = "none";
-							}
-						}
-					</script>
+					<div id="suppliesContainer" class="component"></div>
 				</ul>
 			</nav>
 		</header>
@@ -133,6 +78,7 @@
 						</div>
 					</div>
 				</footer>
+				<script src="../../+/supplier/javascript/script.js"></script>
             </main>
         </div>
         <script src="/Projeto-Integrador - IV/src/components/header/scripts/mobileNavbar.js"></script>

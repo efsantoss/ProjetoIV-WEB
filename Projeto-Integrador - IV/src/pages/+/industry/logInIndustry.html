@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/header/styles/header.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/components/footer/styles/footer.css">
 		<link rel="stylesheet" href="/Projeto-Integrador - IV/src/common/styles/fonts.css">
-        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/industry/styles/logInIndustry.css">
+        <link rel="stylesheet" href="/Projeto-Integrador - IV/src/pages/+/supplier/styles/logInSupplier.css">
 	</head>
 	<body>
 		<header>
@@ -28,25 +28,25 @@
 		<div class="main_container">
             <main>
                 <div class="container">
-                    <form class="rectangle">
+                    <div class="rectangle">
 						<div class="section_email" id="loginForm">
 							<h1>E-mail</h1>
-							<input type="text" class="email" id="email">
+							<input type="text" class="email" id="username" name="username" required>
 						</div>
 						<div class="section_password">
 							<h1>Senha</h1>
-							<input type="password" class="password" id="password" >
+							<input type="password" class="password" id="password" name="password" required>
 						</div>  
 						<div class="buttons">
 							<div class="buttons1">
-								<button class="button-86" onclick="fazerChamadaLoginGraphQLIndustry()">login</button>   
+								<button class="button-86" onclick="fazerChamadaLoginGraphQLIndustry()">login</button>  
 							</div>  
 
 							<div class="buttons2">
-								<button class="button-86" onclick="redirecionar2()">Não tem uma conta?</button>
+								<button class="button-86" onclick="redirecionar()">Não tem uma conta?</button>
 
 								<script>
-									function redirecionar2() {
+									function redirecionar() {
 									
 									window.location.href = '../../+/industry/createAccountIndustry.html';
 									}
@@ -54,7 +54,7 @@
 							</div>    
 						</div>
 						   
-                    </form>
+                    </div>
                 </div>
                 <footer class="footer">
 					<div class="footer_container">
@@ -80,7 +80,7 @@
 								<script>
 									function redirecionarIndústria() {
 									
-									window.location.href = '../../+/industry/logInIndustry.html';
+									window.location.href = '../../+/industry/IogInIndustry.html';
 									}
 								</script>
 							</ul>
